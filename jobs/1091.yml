@@ -1,0 +1,7 @@
+---
+- hosts: 1091
+  ansible_port: 2323
+  ansible_host: 1091.amagi.tv
+  tasks:
+  - name: Execute the script
+    command: cd blip/current && RAILS_ENV=production bundle exec rake support_token:get_token["support"]
